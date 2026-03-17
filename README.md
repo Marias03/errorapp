@@ -1,88 +1,74 @@
-# ErrorApp - Guía de Errores HTTP
+# ErrorApp - HTTP Error Guide
 
-Una aplicación web moderna para ayudar a desarrolladores a entender y manejar códigos de error HTTP comunes.
+A modern web application to help developers understand and handle common HTTP error codes.
 
-Demo en Vivo: [errorapp](https://erroresapp.vercel.app "errorapp")
+**Live Demo:** [errorapp](https://erroresapp.vercel.app "errorapp")
 
 https://github.com/user-attachments/assets/b8549771-6ab7-4584-ade9-69a7ea69ba51
 
+---
 
+## ✨ Features
 
-------------
+- 📋 Complete catalog of HTTP errors (4xx and 5xx)
+- 💻 Code examples in multiple languages (JavaScript, Python, PHP, Java, etc.)
+- 🌙 Dark/light mode
+- 📱 Responsive interface
+- 🔍 Filters by error type and language
+- ✅ Best practices and solutions
 
+---
 
-
-### Características
-
-- Catálogo completo de errores HTTP (4xx y 5xx)
-- Ejemplos de código en múltiples lenguajes (JavaScript, Python, PHP, Java, etc.)
-- Modo oscuro/claro
-- Interfaz responsive
-- Filtros por tipo de error y lenguaje
-- Buenas prácticas y soluciones
-
-------------
-
-
-
-### Tecnologías
+## 🛠 Technologies
 
 - React
 - TailwindCSS
 - Vite
 - Lucide Icons
 
-------------
+---
 
+## 🚀 Installation
 
-
-### Instalación
-
-1. Clonar el repositorio
-
+**1. Clone the repository**
 ```bash
 git clone https://github.com/AndrewHypervenom/errorapp.git
 ```
 
-2. Instalar dependencias
-
+**2. Install dependencies**
 ```bash
 cd errorapp
-```
-```bash
 npm install
 ```
 
-3. Iniciar servidor de desarrollo
-
+**3. Start development server**
 ```bash
 npm run dev
 ```
 
-------------
+---
 
+## 📁 Project Structure
 
-#### Estructura del Proyecto
+| Folder | Description |
+|--------|-------------|
+| `/src/components` | React components |
+| `/src/hooks` | Custom hooks |
+| `/src/data` | HTTP error data |
+| `/src/assets` | Static assets |
 
-- `/src/components`: Componentes React
-- `/src/hooks`: Custom hooks
-- `/src/data`: Datos de errores HTTP
-- `/src/assets`: Recursos estáticos
+---
 
+## 🤝 Contributing
 
-------------
+Contributions are welcome! Feel free to submit a Pull Request.
+For major changes, please open an issue first to discuss what you would like to change.
 
-#### Contribuir
-¡Las contribuciones son bienvenidas! No dudes en enviar un Pull Request. Para cambios importantes, por favor abre primero un issue para discutir qué te gustaría cambiar.
+---
 
-------------
+Made with ❤️ for productivity enthusiasts
 
+## 📞 Contact
 
-
-Hecho con ❤️ para entusiastas de la productividad
-
-#### 📞 Contacto
-
-GitHub: @AndrewHypervenom
-
-Email: andrew.fajardo@hotmail.com
+- **GitHub:** [@AndrewHypervenom](https://github.com/AndrewHypervenom)
+- **Email:** andrew.fajardo@hotmail.com
