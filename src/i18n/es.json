@@ -1,0 +1,19 @@
+{
+  "title": "Guía de Errores HTTP",
+  "filter_type": "Tipo de Error",
+  "all_errors": "Todos los errores",
+  "client_errors": "Errores de cliente",
+  "server_errors": "Errores de servidor",
+  "languages": "Lenguajes",
+  "all": "Todos",
+  "did_you_know": "¿Sabías que?",
+  "did_you_know_text": "Los códigos de error 4xx indican errores del cliente, mientras que los 5xx indican problemas del servidor.",
+  "general": "General",
+  "examples": "Ejemplos",
+  "prevention": "Prevención",
+  "resources": "Recursos",
+  "solution": "Solución",
+  "impact": "Impacto",
+  "compatible_languages": "Lenguajes compatibles",
+  "no_results": "No se encontraron errores con los filtros seleccionados."
+}

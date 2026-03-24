@@ -1,8 +1,12 @@
-import React from 'react';
-import ThemeToggle from './ThemeToggle';
-import { Menu, Code2 } from 'lucide-react';
+import React from "react";
+import ThemeToggle from "./ThemeToggle";
+import { Menu, Code2 } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 function Header({ setMenuOpen, menuOpen }) {
+  const { t } = useTranslation();
+
   return (
     <header className="bg-gray-900 dark:bg-gray-950 shadow-xl sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -19,11 +23,14 @@ function Header({ setMenuOpen, menuOpen }) {
                 <Code2 className="h-6 w-6 text-white" />
               </div>
               <h1 className="text-xl sm:text-2xl font-bold text-white">
-                Errores de Navegador
+                {t("title")} {/* 👈 reemplazar el texto fijo */}
               </h1>
             </div>
           </div>
-          <ThemeToggle />
+          <div className="flex items-center space-x-3">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
         </div>
       </div>
       <div className="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>

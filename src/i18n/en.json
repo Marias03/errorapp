@@ -1,0 +1,19 @@
+{
+  "title": "HTTP Error Guide",
+  "filter_type": "Error Type",
+  "all_errors": "All errors",
+  "client_errors": "Client errors",
+  "server_errors": "Server errors",
+  "languages": "Languages",
+  "all": "All",
+  "did_you_know": "Did you know?",
+  "did_you_know_text": "4xx error codes indicate client-side errors, while 5xx codes indicate server-side problems.",
+  "general": "General",
+  "examples": "Examples",
+  "prevention": "Prevention",
+  "resources": "Resources",
+  "solution": "Solution",
+  "impact": "Impact",
+  "compatible_languages": "Compatible languages",
+  "no_results": "No errors found with the selected filters."
+}

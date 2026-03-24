@@ -1,26 +1,35 @@
-import React, { useState } from 'react';
-import { Code, Terminal, Filter, ChevronDown, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { Code, Filter, ChevronDown, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, setSelectedErrorType, menuOpen, setMenuOpen }) {
+function Sidebar({
+  selectedLanguage,
+  setSelectedLanguage,
+  selectedErrorType,
+  setSelectedErrorType,
+  menuOpen,
+  setMenuOpen,
+}) {
+  const { t } = useTranslation();
   const [isTypeExpanded, setIsTypeExpanded] = useState(true);
   const [isLanguageExpanded, setIsLanguageExpanded] = useState(true);
 
   const languages = [
-    'todos',
-    'JavaScript',
-    'Python',
-    'PHP',
-    'Java',
-    'Ruby',
-    'C#',
-    'Go',
-    'Nginx'
+    "todos",
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Java",
+    "Ruby",
+    "C#",
+    "Go",
+    "Nginx",
   ];
 
   const errorTypes = [
-    { id: 'todos', label: 'Todos los errores' },
-    { id: 'cliente', label: 'Errores de Cliente (4xx)' },
-    { id: 'servidor', label: 'Errores de Servidor (5xx)' }
+    { id: "todos", label: t("all_errors") },
+    { id: "cliente", label: t("client_errors") },
+    { id: "servidor", label: t("server_errors") },
   ];
 
   const handleLanguageClick = (language) => {
@@ -42,12 +51,12 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
       className={`
         fixed top-0 left-0 h-full w-72
         lg:relative lg:translate-x-0
-        transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'}
+        transform ${menuOpen ? "translate-x-0" : "-translate-x-full"}
         transition-transform duration-300 ease-in-out
         bg-gray-900 dark:bg-gray-950
         z-30 lg:z-0
         flex flex-col
-        pt-16 lg:pt-0 // Ajuste para el espacio del header en móvil
+        pt-16 lg:pt-0
       `}
     >
       <div className="flex-1 overflow-y-auto">
@@ -60,7 +69,7 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
             >
               <div className="flex items-center space-x-2">
                 <Filter className="h-5 w-5" />
-                <span>Tipo de Error</span>
+                <span>{t("filter_type")}</span>
               </div>
               {isTypeExpanded ? (
                 <ChevronDown className="h-5 w-5" />
@@ -79,8 +88,8 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
                       w-full px-4 py-2 rounded-lg text-left
                       ${
                         selectedErrorType === type.id
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:bg-gray-800'
+                          ? "bg-blue-600 text-white"
+                          : "text-gray-300 hover:bg-gray-800"
                       }
                     `}
                   >
@@ -99,7 +108,7 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
             >
               <div className="flex items-center space-x-2">
                 <Code className="h-5 w-5" />
-                <span>Lenguajes</span>
+                <span>{t("languages")}</span>
               </div>
               {isLanguageExpanded ? (
                 <ChevronDown className="h-5 w-5" />
@@ -118,12 +127,12 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
                       w-full px-4 py-2 rounded-lg text-left
                       ${
                         selectedLanguage === language
-                          ? 'bg-blue-600 text-white'
-                          : 'text-gray-300 hover:bg-gray-800'
+                          ? "bg-blue-600 text-white"
+                          : "text-gray-300 hover:bg-gray-800"
                       }
                     `}
                   >
-                    {language.charAt(0).toUpperCase() + language.slice(1)}
+                    {language === "todos" ? t("all") : language}
                   </button>
                 ))}
               </div>
@@ -133,11 +142,9 @@ function Sidebar({ selectedLanguage, setSelectedLanguage, selectedErrorType, set
           {/* ¿Sabías que? */}
           <div className="mt-6 p-4 bg-gray-800 rounded-lg">
             <h3 className="text-sm font-semibold text-blue-400 mb-2">
-              ¿Sabías que?
+              {t("did_you_know")}
             </h3>
-            <p className="text-sm text-gray-300">
-              Los códigos de error 4xx indican errores del cliente, mientras que los 5xx indican problemas del servidor.
-            </p>
+            <p className="text-sm text-gray-300">{t("did_you_know_text")}</p>
           </div>
         </div>
       </div>
